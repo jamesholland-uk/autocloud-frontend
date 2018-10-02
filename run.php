@@ -15,8 +15,8 @@
 // Database variables
 $servername = "localhost";
 $username = "dbuser";
-$password = "section5";
-$dbname = "azuredb";
+$password = "Panadmin001!";
+$dbname = "auto-hack-cloud";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
