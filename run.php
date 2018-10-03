@@ -25,7 +25,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-// Setup variables anc collect POST data
+// Setup variables and collect POST data
 $uid=date("Ymd-His");
 $resgrp='a_' . $uid;
 $message=$_POST["message"];
