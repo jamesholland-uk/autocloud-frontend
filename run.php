@@ -26,7 +26,7 @@ if ($conn->connect_error) {
 } 
 
 // Setup variables anc collect POST data
-$uid=date("Ymd.His");
+$uid=date("Ymd-His");
 $resgrp='atailor-demomatic_' . $uid;
 $message=$_POST["message"];
 $phone=$_POST["phone"];
