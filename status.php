@@ -71,35 +71,12 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
 
 
 
-
-
-
-
-
-    <!-- This link will add ?blockme=true to your URL, myfilename.php?run=true -->
     <a href="changer.php?uid=<?php echo $uid ?>&blockme=true">Set to blocking</a>
-
-
-
-
-
-
-
-
-
-
-
-
     <br>
     <br>
-    <?php
-      if ($_GET['alertme']) {
-      # This code will run if ?run=true is set.
-      exec("/var/www/html/autocloud-frontend/alertme.sh");
-      }
-    ?>
-    <!-- This link will add ?run=true to your URL, myfilename.php?run=true -->
-    <a href="?uid=<?php echo $uid ?>&alertme=true">Set to alerting</a>
+    <a href="changer.php?uid=<?php echo $uid ?>&alertme=true">Set to alerting</a>
+
+
 
     <br>
     <br>

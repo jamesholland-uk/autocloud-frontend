@@ -37,8 +37,11 @@
         echo $ipadd;
         
         if ($_GET['blockme']) {
-        # This code will run if ?blockme=true is set.
-        exec("/var/www/html/autocloud-frontend/blockme.sh $ipadd");
+                exec("/var/www/html/autocloud-frontend/blockme.sh $ipadd");
+        }
+
+        if ($_GET['alertme']) {
+                exec("/var/www/html/autocloud-frontend/alertme.sh $ipadd");
         }
 ?>
 
