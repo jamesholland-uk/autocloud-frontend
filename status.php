@@ -63,7 +63,7 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
 	<ul>
 	<li><a href="https://<?php echo $status['MGMTIP']  ?>" target="_blank">Link to GUI of your brand new firewall!</a><br>
 	<li><a href="https://demomatic-rama-gcp.panw.co.uk" target="_blank">Link to Panorama</a><br>
-	<li><a href="http://<?php echo $status['KALIIP']  ?>" target="_blank">Link to Attacker</a><br>
+	<li><a href="http://<?php echo $status['KALIIP']  ?>:4200" target="_blank">Link to Attacker</a><br>
   <li><a href="http://<?php echo $status['UNTRUSTIP']  ?>" target="_blank">Link to Backend Web Server</a><br>
     </ul><br><br>
     Deployment took <?php echo $status['DEPLOYTIME'] ?><br>
