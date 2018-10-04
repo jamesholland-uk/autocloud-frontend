@@ -38,10 +38,14 @@
         
         if ($_GET['blockme']) {
                 exec("/var/www/html/autocloud-frontend/blockme.sh $ipadd");
+                echo "Selected Security Profiles with block..."
+                sleep(3);
         }
 
         if ($_GET['alertme']) {
                 exec("/var/www/html/autocloud-frontend/alertme.sh $ipadd");
+                echo "Selected Security Profiles with alert..."
+                sleep(3);
         }
 
         header("Location: status.php?uid=$uid");
