@@ -79,8 +79,8 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
     <!-- This link will add ?blockme=true to your URL, myfilename.php?run=true -->
     <a href="?uid=<?php echo $uid ?>&blockme=true">Set to blocking</a>
 
-    <form action=”../cgi-bin/blockme.sh” method=”post”>
-    <input type=”submit” value=”Block”>
+    <form action="../cgi-bin/blockme.sh" method="post">
+    <input type="submit" value="Block">
     </form>
     
     <br>
