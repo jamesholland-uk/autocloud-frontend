@@ -75,7 +75,7 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
       }
     ?>
     <!-- This link will add ?blockme=true to your URL, myfilename.php?run=true -->
-    <a href="?blockme=true">Set to blocking</a>
+    <a href="?uid=<?php $uid ?>&blockme=true">Set to blocking</a>
 
     <?php
       if ($_GET['alertme']) {
