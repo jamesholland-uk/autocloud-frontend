@@ -72,6 +72,7 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
       if ($_GET['blockme']) {
       # This code will run if ?blockme=true is set.
       exec("blockme.sh");
+      exec("touch testr");
       }
     ?>
     <!-- This link will add ?blockme=true to your URL, myfilename.php?run=true -->
