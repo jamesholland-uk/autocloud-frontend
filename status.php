@@ -63,9 +63,30 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
 	<ul>
 	<li><a href="https://<?php echo $status['MGMTIP']  ?>" target="_blank">Link to GUI of your brand new firewall!</a><br>
 	<li><a href="https://demomatic-rama-gcp.panw.co.uk" target="_blank">Link to Panorama</a><br>
-	<li><a href="http://<?php echo $status['KALIIP']  ?>:4200" target="_blank">Link to Attacker</a><br>
-  <li><a href="http://<?php echo $status['UNTRUSTIP']  ?>" target="_blank">Link to Backend Web Server</a><br>
-    </ul><br><br>
+	<li><a href="http://<?php echo $status['KALIIP']  ?>:4200" target="_blank">Link to Attacker Console for Metasploit</a><br>
+  <li><a href="http://<?php echo $status['UNTRUSTIP']  ?>" target="_blank">Link to Web Server for Web-Based Attacks</a><br>
+    </ul>
+    <br>
+   
+    <?php
+      if ($_GET['blockme']) {
+      # This code will run if ?blockme=true is set.
+      exec("blockme.sh");
+      }
+    ?>
+    <!-- This link will add ?blockme=true to your URL, myfilename.php?run=true -->
+    <a href="?blockme=true">Set to blocking</a>
+
+    <?php
+      if ($_GET['alertme']) {
+      # This code will run if ?run=true is set.
+      exec("alertme.sh");
+      }
+    ?>
+    <!-- This link will add ?run=true to your URL, myfilename.php?run=true -->
+    <a href="?alertme=true">Set to blocking</a>
+
+    <br>
     Deployment took <?php echo $status['DEPLOYTIME'] ?><br>
     Bootstrapping took <?php echo $status['BOOTTIME'] ?><br>
     Post-deployment configuration took <?php echo $status['DONETIME'] ?><br>
