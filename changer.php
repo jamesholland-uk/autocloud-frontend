@@ -11,6 +11,8 @@
         <table border="0">
         <tr><td><img src="logo.png"></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td><h1>Customised Cloud Automation Demo</h1></td></tr>
         <tr><td>&nbsp;</td><td>&nbsp;</td><td>
+        <br><br><br>
+        <h2>
 
 <?php
         // Database variables
@@ -39,18 +41,18 @@
         
         if ($_GET['blockme']) {
                 exec("/var/www/html/autocloud-frontend/blockme.sh $ipadd");
-                echo "Selected Security Profiles with block...";
+                echo "Selected the Security Profiles with block...";
         }
 
         if ($_GET['alertme']) {
                 exec("/var/www/html/autocloud-frontend/alertme.sh $ipadd");
-                echo "Selected Security Profiles with alert...";
+                echo "Selected the Security Profiles with alert...";
         }
 
         header("refresh:3; url=status.php?uid=$uid");
         exit();
 ?>
-
+</h2>
 </td></tr>
         </table>
         </b>
