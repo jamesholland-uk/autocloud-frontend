@@ -71,7 +71,7 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
     <?php
       if ($_GET['blockme']) {
       # This code will run if ?blockme=true is set.
-      shell_exec("/var/www/cgi-bin/blockme.sh");
+      exec("/var/www/html/autocloud-frontend/blockme.sh");
       //exec("touch testr");
       //shell_exec("touch testr");
       }
