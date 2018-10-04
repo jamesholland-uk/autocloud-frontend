@@ -48,7 +48,7 @@
                 sleep(3);
         }
 
-        header("Location: status.php?uid=$uid");
+        header("refresh:3; url=status.php?uid=$uid");
         exit();
 ?>
 
