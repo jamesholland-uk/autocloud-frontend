@@ -41,15 +41,15 @@
         
         if ($_GET['blockme']) {
                 exec("/var/www/html/autocloud-frontend/blockme.sh $ipadd");
-                echo "Selected the Security Profiles with block...";
+                echo "Selecting the Security Profiles with block...";
         }
 
         if ($_GET['alertme']) {
                 exec("/var/www/html/autocloud-frontend/alertme.sh $ipadd");
-                echo "Selected the Security Profiles with alert...";
+                echo "Selecting the Security Profiles with alert...";
         }
 
-        header("refresh:3; url=status.php?uid=$uid");
+        header("refresh:12; url=status.php?uid=$uid");
         exit();
 ?>
 </h2>
