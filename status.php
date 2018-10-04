@@ -68,32 +68,40 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
     </ul>
     <br>
    
-    <?php
-      if ($_GET['blockme']) {
-      # This code will run if ?blockme=true is set.
-      exec("/var/www/html/autocloud-frontend/blockme.sh");
-      //exec("touch testr");
-      //shell_exec("touch testr");
-      }
-    ?>
+
+
+
+
+
+
+
+
     <!-- This link will add ?blockme=true to your URL, myfilename.php?run=true -->
-    <a href="?uid=<?php echo $uid ?>&blockme=true">Set to blocking</a>
+    <a href="changer.php?uid=<?php echo $uid ?>&blockme=true">Set to blocking</a>
 
-    <form action="../cgi-bin/blockme.sh" method="post">
-    <input type="submit" value="Block">
-    </form>
-    
+
+
+
+
+
+
+
+
+
+
+
     <br>
-
+    <br>
     <?php
       if ($_GET['alertme']) {
       # This code will run if ?run=true is set.
-      exec("alertme.sh");
+      exec("/var/www/html/autocloud-frontend/alertme.sh");
       }
     ?>
     <!-- This link will add ?run=true to your URL, myfilename.php?run=true -->
     <a href="?uid=<?php echo $uid ?>&alertme=true">Set to alerting</a>
 
+    <br>
     <br>
     Deployment took <?php echo $status['DEPLOYTIME'] ?><br>
     Bootstrapping took <?php echo $status['BOOTTIME'] ?><br>
