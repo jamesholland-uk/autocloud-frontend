@@ -52,9 +52,8 @@ echo "<br><br><br>";
 if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $status['STATUS'] == "Configuring") {
 ?>
 	<ul>
-	<li><a href="https://portal.azure.com/#@paloaltonetworks.onmicrosoft.com/resource/subscriptions/137c8c89-2b20-4f91-96df-ae87343bb016/resourceGroups/<?php echo $status['RESGRP'] ?>/deployments" target="_blank">Link to Azure Resource Group to view deployment</a><br>
 	<li><a href="process-summary.png" target="_blank">Link to Deployment Process Summary Diagram</a><br>
-	<li><a href="azure-summary.png" target="_blank">Link to Cloud Elements Diagram</a><br>
+	<li><a href="network-diagram.png" target="_blank">Link to Topology Diagram</a><br>
 	<li><a href="https://www.youtube.com/watch?v=CLgNpVLpaYc&feature=youtu.be" target="_blank">Manual Process Video</a><br>
 </ul>
 <?php
@@ -76,9 +75,8 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
     <br>
 	<br>
 	<ul>
-        <li><a href="https://portal.azure.com/#@paloaltonetworks.onmicrosoft.com/resource/subscriptions/137c8c89-2b20-4f91-96df-ae87343bb016/resourceGroups/<?php echo $status['RESGRP'] ?>/deployments" target="_blank">Link to Azure Resource Group to view deployment</a><br>
         <li><a href="process-summary.png" target="_blank">Link to Deployment Process Summary Diagram</a><br>
-        <li><a href="azure-summary.png" target="_blank">Link to Cloud Elements Diagram</a><br>
+        <li><a href="network-diagram.png" target="_blank">Link to Topology Diagram</a><br>
         <li><a href="https://www.youtube.com/watch?v=CLgNpVLpaYc&feature=youtu.be" target="_blank">Manual Process Video</a><br>
 </ul>
 <?php
