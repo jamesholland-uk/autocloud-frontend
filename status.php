@@ -77,6 +77,8 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
     <!-- This link will add ?blockme=true to your URL, myfilename.php?run=true -->
     <a href="?uid=<?php echo $uid ?>&blockme=true">Set to blocking</a>
 
+    <br>
+
     <?php
       if ($_GET['alertme']) {
       # This code will run if ?run=true is set.
@@ -84,7 +86,7 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
       }
     ?>
     <!-- This link will add ?run=true to your URL, myfilename.php?run=true -->
-    <a href="?alertme=true">Set to blocking</a>
+    <a href="?uid=<?php echo $uid ?>&alertme=true">Set to alerting</a>
 
     <br>
     Deployment took <?php echo $status['DEPLOYTIME'] ?><br>
