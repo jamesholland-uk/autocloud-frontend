@@ -34,7 +34,7 @@
         $status= $result->fetch_assoc();
 
         $ipadd=$status['MGMTIP'];
-        echo $ipadd;
+        //echo $ipadd;
         
         if ($_GET['blockme']) {
                 exec("/var/www/html/autocloud-frontend/blockme.sh $ipadd");
@@ -43,6 +43,9 @@
         if ($_GET['alertme']) {
                 exec("/var/www/html/autocloud-frontend/alertme.sh $ipadd");
         }
+
+        header("Location: status.php?uid=$uid");
+        exit();
 ?>
 
 </td></tr>
