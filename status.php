@@ -38,13 +38,13 @@ echo "<br><br><br><h2><b>Status:&nbsp;&nbsp;&nbsp; </b><i>" . $status['STATUS'] 
 if($status['STATUS'] == "Ready") {
 echo "<img src=1.png><br><br><b><i>You already save 10 minutes just using that HTML form!</b></i>";
 } elseif($status['STATUS'] == "Deploying") {
-echo "<img src=2.png><br><br><b><i>This deployment stage takes about 3 minutes, which would be 45 minutes or more if done manually, assuming you know exactly every step (and make no mistakes!)</b></i>";
+echo "<img src=2.png><br><br><b><i>This deployment stage takes about 1 minute, which would be 45 minutes or more if done manually, assuming you know exactly every step (and make no mistakes!)</b></i>";
 } elseif($status['STATUS'] == "Bootstrapping") {
-echo "<img src=3.png><br><br><b><i>Now we're bootstrapping, which takes around 3 minutes, or at least 30 minutes if you did it by hand!</b></i>";
+echo "<img src=3.png><br><br><b><i>Now we're bootstrapping, which takes around 5 minutes, or at least 60 minutes if you did it by hand!</b></i>";
 } elseif($status['STATUS'] == "Configuring") {
-echo "<img src=4.png><br><br><b><i>Now a little bit of post-bootstrapping configuration (which can only be done post-bootstrap once we know the new firewall's serial number), and we're pretty much done...</b></i>";
+echo "<img src=4.png><br><br><b><i>Now a little bit of post-bootstrapping configuration, and we're pretty much done...</b></i>";
 } elseif($status['STATUS'] == "Done") {
-echo "<img src=5.png><br><br><b><i>We're all done, you saved yourself an hour or two of manual cloud tasks and PAN-OS tasks, that's plenty of time for tea or coffee, and even that lunch break that's always cut short!</b></i>";
+echo "<img src=5.png><br><br><b><i>We're all done, you saved yourself a two or three hours of manual cloud tasks and PAN-OS tasks, that's plenty of time for tea or coffee, and even that lunch break that's always cut short!</b></i>";
 }
 
 echo "<br><br><br>";
@@ -63,12 +63,12 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
 ?>
 	<ul>
 	<li><a href="https://<?php echo $status['MGMTIP']  ?>" target="_blank">Link to GUI of your brand new firewall!</a><br>
-	<li><a href="https://demomatic-rama.panw.co.uk" target="_blank">Link to Panorama</a><br>
-	<li><a href="https://demomatic-lsvpn-fwmgmt.panw.co.uk" target="_blank">Link to LSVPN Headend Firewall</a><br>
+	<li><a href="https://demomatic-rama-gcp.panw.co.uk" target="_blank">Link to Panorama</a><br>
+	<li><a href="https://<?php echo $status['KALIIP']  ?>" target="_blank">Link to Attacker</a><br>
     </ul><br><br>
     Deployment took <?php echo $status['DEPLOYTIME'] ?><br>
     Bootstrapping took <?php echo $status['BOOTTIME'] ?><br>
-    Post-deployment configuring took <?php echo $status['DONETIME'] ?><br>
+    Post-deployment configuration took <?php echo $status['DONETIME'] ?><br>
     <br>
     <b>Total time taken was <?php echo $status['TOTALTIME'] ?></b><br>
     <br>
