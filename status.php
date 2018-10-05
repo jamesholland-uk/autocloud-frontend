@@ -57,7 +57,6 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
 	<li><a href="https://www.youtube.com/watch?v=DvLN-VH_xoo&feature=youtu.be" target="_blank">Manual Process Video</a><br>
 </ul>
 <?php
-
 } elseif($status['STATUS'] == "Done") {
 ?>
 	<ul>
@@ -66,12 +65,22 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
 	<li><a href="http://<?php echo $status['KALIIP']  ?>:4200" target="_blank">Link to Attacker Console for Metasploit</a><br>
   <li><a href="http://<?php echo $status['UNTRUSTIP']  ?>" target="_blank">Link to Web Server for Web-Based Attacks</a><br>
     </ul>
-    <br>
 
+    <?php
+        if($status['MODE'] == "ALERT") {
+          echo "<br>";
+    ?>
     <a href="changer.php?uid=<?php echo $uid ?>&blockme=true">Set to <span style="color:red;font-weight:bold">block</span></a>
-    <br>
+    <?php
+        }
+        else {
+          echo "<br>";
+    ?>
     <a href="changer.php?uid=<?php echo $uid ?>&alertme=true">Set to <span style="color:green;font-weight:bold">alert</span></a>
-
+    <?php
+        }
+    ?>
+    
     <br>
     <br>
     Deployment took <?php echo $status['DEPLOYTIME'] ?><br>
