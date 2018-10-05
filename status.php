@@ -68,7 +68,7 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
     </ul>
 
     <?php
-        if($status['MODE'] == "Alert") {
+        if($status['MODE'] == "Non-Blocking") {
           echo "<br>";
     ?>
     <a href="changer.php?uid=<?php echo $uid ?>&blockme=true">Change to BLOCKING</a>
