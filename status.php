@@ -54,7 +54,7 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
 	<ul>
 	<li><a href="process-summary.png" target="_blank">Link to Deployment Process Summary Diagram</a><br>
 	<li><a href="network-diagram.png" target="_blank">Link to Topology Diagram</a><br>
-	<li><a href="https://www.youtube.com/watch?v=CLgNpVLpaYc&feature=youtu.be" target="_blank">Manual Process Video</a><br>
+	<li><a href="https://www.youtube.com/watch?v=DvLN-VH_xoo&feature=youtu.be" target="_blank">Manual Process Video</a><br>
 </ul>
 <?php
 
@@ -71,10 +71,10 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
 
 
 
-    <a href="changer.php?uid=<?php echo $uid ?>&blockme=true">Set to blocking</a>
+    <ul><li><a href="changer.php?uid=<?php echo $uid ?>&blockme=true">Set to <b>blocking</b></a></ul>
     <br>
     <br>
-    <a href="changer.php?uid=<?php echo $uid ?>&alertme=true">Set to alerting</a>
+    <ul><li><a href="changer.php?uid=<?php echo $uid ?>&alertme=true">Set to <b>alerting</b></a></ul>
 
 
 
@@ -92,7 +92,7 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
 	<ul>
         <li><a href="process-summary.png" target="_blank">Link to Deployment Process Summary Diagram</a><br>
         <li><a href="network-diagram.png" target="_blank">Link to Topology Diagram</a><br>
-        <li><a href="https://www.youtube.com/watch?v=CLgNpVLpaYc&feature=youtu.be" target="_blank">Manual Process Video</a><br>
+        <li><a href="https://www.youtube.com/watch?v=DvLN-VH_xoo&feature=youtu.be" target="_blank">Manual Process Video</a><br>
 </ul>
 <?php
 }
