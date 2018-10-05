@@ -39,7 +39,7 @@ if($status['MODE'] == "Non-Blocking") {
 }
 if($status['MODE'] == "Blocking") 
 { 
-  echo " - We're using the next-genration firewall to block attacks..."; 
+  echo " - We're using the next-generation firewall to block attacks..."; 
 }
 echo "</i></h2>\r\n";
 
@@ -85,7 +85,7 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
         else {
           echo "<br>";
     ?>
-    <a href="changer.php?uid=<?php echo $uid ?>&alertme=true">Change to PERMISSIVEG</a>
+    <a href="changer.php?uid=<?php echo $uid ?>&alertme=true">Change to PERMISSIVE</a>
     <?php
         }
     ?>
