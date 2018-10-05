@@ -33,7 +33,15 @@ $conn->query($sqlcheck);
 $result = $conn->query($sqlcheck);
 $status= $result->fetch_assoc();
 echo "<br><br><br><h2><b>Status:&nbsp;&nbsp;&nbsp; </b><i>" . $status['STATUS'] . "</i></h2>\r\n";
-echo "<h2><b>Mode:&nbsp;&nbsp;&nbsp; </b><i>" . $status['MODE'] . "</i></h2>\r\n";
+echo "<h2><b>Mode:&nbsp;&nbsp;&nbsp; </b><i>" . $status['MODE'];
+if($status['MODE'] == "Non-Blocking") {
+  echo " - We're relying on the native cloud provider security...";
+}
+if($status['MODE'] == "Blocking") 
+{ 
+  echo " - We're using the next-genration firewall to block attacks..."; 
+}
+echo "</i></h2>\r\n";
 
 // Insert message related to current stage of the process
 if($status['STATUS'] == "Ready") {
@@ -77,7 +85,7 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
         else {
           echo "<br>";
     ?>
-    <a href="changer.php?uid=<?php echo $uid ?>&alertme=true">Change to NON-BLOCKING</a>
+    <a href="changer.php?uid=<?php echo $uid ?>&alertme=true">Change to PERMISSIVEG</a>
     <?php
         }
     ?>

@@ -50,7 +50,7 @@
                 }
                 $conn->close();
 
-                echo "Selecting the Security Profiles with block...";
+                echo "Now we're going to be using the next-generation firewall with a blocking posture...";
         }
 
         if ($_GET['alertme']) {
@@ -64,7 +64,7 @@
                 }
                 $conn->close();
 
-                echo "Selecting the Security Profiles with alert...";
+                echo "Now we're going to be in a permissive posture, relying solely on cloud provider security...";
         }
 
         header("refresh:12; url=status.php?uid=$uid");
