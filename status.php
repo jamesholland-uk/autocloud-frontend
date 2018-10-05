@@ -68,9 +68,9 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
     </ul>
     <br>
 
-    <a href="changer.php?uid=<?php echo $uid ?>&blockme=true">Set to <p style="color:red"><b>blocking</b></p></a>
+    <a href="changer.php?uid=<?php echo $uid ?>&blockme=true">Set to <span style="color:red;font-weight:bold">block</span></a>
     <br>
-    <a href="changer.php?uid=<?php echo $uid ?>&alertme=true">Set to <p style="color:green"><b>alerting</b></p></a>
+    <a href="changer.php?uid=<?php echo $uid ?>&alertme=true">Set to <span style="color:green;font-weight:bold">alert</span></a>
 
     <br>
     <br>
