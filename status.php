@@ -67,16 +67,10 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
   <li><a href="http://<?php echo $status['UNTRUSTIP']  ?>" target="_blank">Link to Web Server for Web-Based Attacks</a><br>
     </ul>
     <br>
-   
 
-
-
-    <ul><li><a href="changer.php?uid=<?php echo $uid ?>&blockme=true">Set to <p style="color:red"><b>blocking</b></p></a></ul>
+    <a href="changer.php?uid=<?php echo $uid ?>&blockme=true">Set to <p style="color:red"><b>blocking</b></p></a>
     <br>
-    <br>
-    <ul><li><a href="changer.php?uid=<?php echo $uid ?>&alertme=true">Set to <p style="color:green"><b>alerting</b></p></a></ul>
-
-
+    <a href="changer.php?uid=<?php echo $uid ?>&alertme=true">Set to <p style="color:green"><b>alerting</b></p></a>
 
     <br>
     <br>
