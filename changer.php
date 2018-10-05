@@ -41,11 +41,33 @@
         
         if ($_GET['blockme']) {
                 exec("/var/www/html/autocloud-frontend/blockme.sh $ipadd");
+                
+
+
+
+
+                $sql = "UPDATE jobs SET MODE = 'Blocking' WHERE JOB = '$uid'";
+                if ($conn->query($sql) === TRUE) {
+                        //$sqlcheck = "SELECT * FROM jobs WHERE JOB = '$uid'";
+                        //$result = $conn->query($sqlcheck);
+                        //$status= $result->fetch_assoc();
+                        //echo $status['STATUS'] . "<br>\r\n";
+                        echo "<br>";
+                } else {
+                        echo "Error: " . $sql . "<br>" . $conn->error;
+                }
+                $conn->close();
+
+
+
+
+                
                 echo "Selecting the Security Profiles with block...";
         }
 
         if ($_GET['alertme']) {
                 exec("/var/www/html/autocloud-frontend/alertme.sh $ipadd");
+
                 echo "Selecting the Security Profiles with alert...";
         }
 
