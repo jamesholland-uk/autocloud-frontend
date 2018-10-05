@@ -33,6 +33,7 @@ $conn->query($sqlcheck);
 $result = $conn->query($sqlcheck);
 $status= $result->fetch_assoc();
 echo "<br><br><br><h2><b>Status:&nbsp;&nbsp;&nbsp; </b><i>" . $status['STATUS'] . "</i></h2>\r\n";
+echo "<h2><b>Mode:&nbsp;&nbsp;&nbsp; </b><i>" . $status['MODE'] . "</i></h2>\r\n";
 
 // Insert message related to current stage of the process
 if($status['STATUS'] == "Ready") {
@@ -67,20 +68,22 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
     </ul>
 
     <?php
-        if($status['MODE'] == "ALERT") {
+        if($status['MODE'] == "Alert") {
           echo "<br>";
     ?>
-    <a href="changer.php?uid=<?php echo $uid ?>&blockme=true">Set to <span style="color:red;font-weight:bold">block</span></a>
+    <a href="changer.php?uid=<?php echo $uid ?>&blockme=true">Change to block></a>
     <?php
         }
         else {
           echo "<br>";
     ?>
-    <a href="changer.php?uid=<?php echo $uid ?>&alertme=true">Set to <span style="color:green;font-weight:bold">alert</span></a>
+    <a href="changer.php?uid=<?php echo $uid ?>&alertme=true">Change to alert</a>
     <?php
         }
     ?>
     
+    <br>
+    <br>
     <br>
     <br>
     Deployment took <?php echo $status['DEPLOYTIME'] ?><br>
