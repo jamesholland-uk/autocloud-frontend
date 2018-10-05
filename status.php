@@ -71,10 +71,10 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
 
 
 
-    <ul><li><a href="changer.php?uid=<?php echo $uid ?>&blockme=true">Set to <b>blocking</b></a></ul>
+    <ul><li><a href="changer.php?uid=<?php echo $uid ?>&blockme=true">Set to <p style="color:red"><b>blocking</b></p></a></ul>
     <br>
     <br>
-    <ul><li><a href="changer.php?uid=<?php echo $uid ?>&alertme=true">Set to <b>alerting</b></a></ul>
+    <ul><li><a href="changer.php?uid=<?php echo $uid ?>&alertme=true">Set to <p style="color:green"><b>alerting</b></p></a></ul>
 
 
 
