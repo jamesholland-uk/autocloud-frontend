@@ -77,10 +77,11 @@ echo "<br><br><br>";
 
 if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $status['STATUS'] == "Configuring") {
 ?>
-	<ul>
-	<li><a href="process-summary.png" target="_blank">Link to Deployment Process Summary Diagram</a><br>
-	<li><a href="network-diagram.png" target="_blank">Link to Topology Diagram</a><br>
-	<li><a href="https://www.youtube.com/watch?v=DvLN-VH_xoo&feature=youtu.be" target="_blank">Manual Process Video</a><br>
+Information:
+<ul>
+  <li><a href="process-summary.png" target="_blank">Deployment Process Summary Diagram</a><br>
+  <li><a href="network-diagram.png" target="_blank">Topology Diagram</a><br>
+  <li><a href="https://www.youtube.com/watch?v=DvLN-VH_xoo&feature=youtu.be" target="_blank">Manual Process Video</a><br>
 </ul>
 <?php
 } elseif($status['STATUS'] == "Done") {
@@ -98,9 +99,7 @@ Mischief:
 </ul>
 <br>
 <br>
-<br>
-<br>
-Timings
+Timings:
 <ul>	
   <li>Deployment took <?php echo $status['DEPLOYTIME'] ?>
   <li>Bootstrapping took <?php echo $status['BOOTTIME'] ?>
@@ -110,9 +109,10 @@ Timings
 </ul>
 <br>
 <br>
+Information:
 <ul>
-  <li><a href="process-summary.png" target="_blank">Link to Deployment Process Summary Diagram</a><br>
-  <li><a href="network-diagram.png" target="_blank">Link to Topology Diagram</a><br>
+  <li><a href="process-summary.png" target="_blank">Deployment Process Summary Diagram</a><br>
+  <li><a href="network-diagram.png" target="_blank">Topology Diagram</a><br>
   <li><a href="https://www.youtube.com/watch?v=DvLN-VH_xoo&feature=youtu.be" target="_blank">Manual Process Video</a><br>
 </ul>
 <?php
