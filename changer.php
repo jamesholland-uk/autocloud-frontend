@@ -64,7 +64,7 @@
                 }
                 $conn->close();
 
-                echo "Now we're going to be in a permissive posture, relying solely on cloud provider security...";
+                echo "Now we're going to make the next-generation firewall permissive, relying solely on cloud provider security...";
         }
 
         header("refresh:12; url=status.php?uid=$uid");
