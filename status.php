@@ -35,7 +35,8 @@ $status= $result->fetch_assoc();
 echo "<br><br><br><h2><b>Status:&nbsp;&nbsp;&nbsp; </b><i>" . $status['STATUS'] . "</i></h2>\r\n";
 
 // Report stats of NGFW config
-echo "<h2><b>Mode:&nbsp;&nbsp;&nbsp; </b><i>" . $status['MODE'];
+echo "<h2><b>Mode:&nbsp;&nbsp;&nbsp; </b><i>";
+//echo $status['MODE'];
 if($status['MODE'] == "Non-Blocking") {
   echo "&nbsp;&nbsp;<img src=off.png> - We're relying on the native cloud provider security...";
 }
