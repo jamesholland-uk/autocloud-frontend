@@ -37,11 +37,11 @@ echo "<br><br><br><h2><b>Status:&nbsp;&nbsp;&nbsp; </b><i>" . $status['STATUS'] 
 // Report stats of NGFW config
 echo "<h2><b>Mode:&nbsp;&nbsp;&nbsp; </b><i>" . $status['MODE'];
 if($status['MODE'] == "Non-Blocking") {
-  echo "<img src=off.png> - We're relying on the native cloud provider security...";
+  echo "&nbsp;&nbsp;<img src=off.png> - We're relying on the native cloud provider security...";
 }
 if($status['MODE'] == "Blocking") 
 { 
-  echo "<img src=on.png> - We're using the next-generation firewall to block attacks..."; 
+  echo "&nbsp;&nbsp;<img src=on.png> - We're using the next-generation firewall to block attacks..."; 
 }
 echo "</i></h2>\r\n";
 
