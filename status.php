@@ -33,13 +33,15 @@ $conn->query($sqlcheck);
 $result = $conn->query($sqlcheck);
 $status= $result->fetch_assoc();
 echo "<br><br><br><h2><b>Status:&nbsp;&nbsp;&nbsp; </b><i>" . $status['STATUS'] . "</i></h2>\r\n";
+
+// Report stats of NGFW config
 echo "<h2><b>Mode:&nbsp;&nbsp;&nbsp; </b><i>" . $status['MODE'];
 if($status['MODE'] == "Non-Blocking") {
-  echo " - We're relying on the native cloud provider security...";
+  echo "<img src=off.png> - We're relying on the native cloud provider security...";
 }
 if($status['MODE'] == "Blocking") 
 { 
-  echo " - We're using the next-generation firewall to block attacks..."; 
+  echo "<img src=on.png> - We're using the next-generation firewall to block attacks..."; 
 }
 echo "</i></h2>\r\n";
 
