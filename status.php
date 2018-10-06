@@ -125,13 +125,10 @@ echo "Email:" . $status['EMAIL'] . "<br>";
 echo "Nickname: " . $status['NICKNAME'] . "<br></font><br><br>";
 
 if($status['STATUS'] == "Done") {
-echo '<b><a href=index.html><img src=off.png alt="Start Again"></a><b><br><br><br><br>';
+echo '<b><a href=index.html><img src=startagain.png alt="Start Again"></a><b><br><br><br><br>';
 }
 
-
 $conn->close();
-
-
 
 ?>
 	</td></tr>
