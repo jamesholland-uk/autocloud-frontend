@@ -4,10 +4,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <?php 
       // Database variables
-      $servername = "localhost";
-      $username = "dbuser";
-      $password = "Panadmin001!";
-      $dbname = "auto-hack-cloud";
+      include('creds.php');
+      //$servername = "localhost";
+      //$username = "dbuser";
+      //$password = "Panadmin001!";
+      //$dbname = "auto-hack-cloud";
 
       // Create connection
       $conn = new mysqli($servername, $username, $password, $dbname);
@@ -42,26 +43,6 @@
 	<tr><td><img src="logo.png"></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td><h1>Customised Cloud Automation Demo</h1></td></tr>
 	<tr><td>&nbsp;</td><td>&nbsp;</td><td>
 <?php
-// Database variables
-//$servername = "localhost";
-//$username = "dbuser";
-//$password = "Panadmin001!";
-//$dbname = "auto-hack-cloud";
-
-// Create connection
-//$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-//if ($conn->connect_error) {
-//    die("Connection failed: " . $conn->connect_error);
-//} 
-
-// Collect job variable and get status
-//$uid=$_GET["uid"];
-//$sqlcheck = "SELECT * FROM jobs WHERE JOB = '$uid'";
-
-//$conn->query($sqlcheck);
-//$result = $conn->query($sqlcheck);
-//$status= $result->fetch_assoc();
 
 // Display status
 echo "<br><br><br><h2><b>Status:&nbsp;&nbsp;&nbsp; </b><i>" . $status['STATUS'] . "</i></h2>\r\n";
