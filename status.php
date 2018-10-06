@@ -71,7 +71,7 @@ if($status['STATUS'] == "Done")
 if($status['STATUS'] == "Ready") {
 echo "<img src=1.png><br><br><b><i>You already saved 10 minutes just using that HTML form!</b></i>";
 } elseif($status['STATUS'] == "Deploying") {
-echo "<img src=2.png><br><br><b><i>This deployment stage takes about 1 minute, which would be 45 minutes or more if done manually, assuming you know exactly every step (and make no mistakes!)</b></i>";
+echo "<img src=2.png><br><br><b><i>This deployment stage takes about 2 minutes, which would be 45 minutes or more if done manually, assuming you know exactly every step (and make no mistakes!)</b></i>";
 } elseif($status['STATUS'] == "Bootstrapping") {
 echo "<img src=3.png><br><br><b><i>Now we're bootstrapping, which takes around 5 minutes, or at least 60 minutes if you did it by hand!</b></i>";
 } elseif($status['STATUS'] == "Configuring") {
