@@ -43,11 +43,11 @@ if($status['STATUS'] == "Done")
     //echo $status['MODE'];
     if($status['MODE'] == "Non-Blocking")
     {
-      echo "&nbsp;<a href="changer.php?uid=' . $uid . '&blockme=true"><img src=off.png></a> - We're using the native cloud provider security, the next-generation firewall is off...";
+      echo '&nbsp;<a href="changer.php?uid=' . $uid . '&blockme=true"><img src=off.png></a> - ' . "We're using the native cloud provider security, the next-generation firewall is off...";
     }
     if($status['MODE'] == "Blocking") 
     { 
-      echo "&nbsp;<a href="changer.php?uid=' . $uid  . '&alertme=true"><img src=on.png></a> - We're using the next-generation firewall to block attacks..."; 
+      echo '&nbsp;<a href="changer.php?uid=' . $uid  . '&alertme=true"><img src=on.png></a> - ' . "We're using the next-generation firewall to block attacks..."; 
     }
     echo "</i></h2>\r\n";
 
