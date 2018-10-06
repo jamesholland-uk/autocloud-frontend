@@ -136,10 +136,5 @@ $conn->close();
 	</td></tr>
 	</table>
 	</b>
-  <?php
-    if($status['STATUS'] == "Done") {
-      sleep(3600);
-    }
-  ?>
   </body>
 </html>
