@@ -32,19 +32,33 @@ $sqlcheck = "SELECT * FROM jobs WHERE JOB = '$uid'";
 $conn->query($sqlcheck);
 $result = $conn->query($sqlcheck);
 $status= $result->fetch_assoc();
+
+// Display status
 echo "<br><br><br><h2><b>Status:&nbsp;&nbsp;&nbsp; </b><i>" . $status['STATUS'] . "</i></h2>\r\n";
 
-// Report stats of NGFW config
-echo "<h2><b>Mode:&nbsp;&nbsp;&nbsp; </b><i>";
-//echo $status['MODE'];
-if($status['MODE'] == "Non-Blocking") {
-  echo "&nbsp;&nbsp;<img src=off.png> - We're relying on the native cloud provider security...";
+// If done, report stats of NGFW config
+if($status['STATUS'] == "Done") {
+    echo "<h2><b>Mode:&nbsp;&nbsp;&nbsp; </b><i>";
+    //echo $status['MODE'];
+    if($status['MODE'] == "Non-Blocking") {
+      echo "&nbsp;<img src=off.png> - We're relying on the native cloud provider security...";
+    }
+    if($status['MODE'] == "Blocking") 
+    { 
+      echo "&nbsp;<img src=on.png> - We're using the next-generation firewall to block attacks..."; 
+    }
+    echo "</i></h2>\r\n";
+
+    // Display option to change mode
+    if($status['MODE'] == "Non-Blocking") {
+      echo "<br>";
+      echo "<a href="changer.php?uid=<?php echo $uid ?>&blockme=true">Change to BLOCKING</a>";
+    }
+    else {
+      echo "<br>";
+      echo "<a href="changer.php?uid=<?php echo $uid ?>&alertme=true">Change to PERMISSIVE</a>";
+    }
 }
-if($status['MODE'] == "Blocking") 
-{ 
-  echo "&nbsp;&nbsp;<img src=on.png> - We're using the next-generation firewall to block attacks..."; 
-}
-echo "</i></h2>\r\n";
 
 // Insert message related to current stage of the process
 if($status['STATUS'] == "Ready") {
@@ -77,22 +91,6 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
 	<li><a href="http://<?php echo $status['KALIIP']  ?>:4200" target="_blank">Link to Attacker Console for Metasploit</a><br>
   <li><a href="http://<?php echo $status['UNTRUSTIP']  ?>" target="_blank">Link to Web Server for Web-Based Attacks</a><br>
     </ul>
-
-    <?php
-        if($status['MODE'] == "Non-Blocking") {
-          echo "<br>";
-    ?>
-    <a href="changer.php?uid=<?php echo $uid ?>&blockme=true">Change to BLOCKING</a>
-    <?php
-        }
-        else {
-          echo "<br>";
-    ?>
-    <a href="changer.php?uid=<?php echo $uid ?>&alertme=true">Change to PERMISSIVE</a>
-    <?php
-        }
-    ?>
-    
     <br>
     <br>
     <br>
