@@ -1,7 +1,15 @@
 #!/bin/bash
+
 # Change security profiles
 curl -g -k -X GET 'https://'$1'/api/?type=config&action=edit&key=LUFRPT1idjBKeGo5R3pYZDYxMTRnbktOVkgxajlsa3M9RzFuYWZSdENlc3JZN2xCRzg3WlB0QkhqdGVVWm8xV2Nub05tRTBoNHkvbz0=&xpath=/config/devices/entry[@name=%27localhost.localdomain%27]/vsys/entry[@name=%27vsys1%27]/rulebase/security/rules/entry[@name=%27internet-to-web%27]/profile-setting/group&element=%3Cgroup%3E%3Cmember%3Ealerting%3C/member%3E%3C/group%3E'
 curl -g -k -X GET 'https://'$1'/api/?type=config&action=edit&key=LUFRPT1idjBKeGo5R3pYZDYxMTRnbktOVkgxajlsa3M9RzFuYWZSdENlc3JZN2xCRzg3WlB0QkhqdGVVWm8xV2Nub05tRTBoNHkvbz0=&xpath=/config/devices/entry[@name=%27localhost.localdomain%27]/vsys/entry[@name=%27vsys1%27]/rulebase/security/rules/entry[@name=%27web-to-db%27]/profile-setting/group&element=%3Cgroup%3E%3Cmember%3Ealerting%3C/member%3E%3C/group%3E'
 curl -g -k -X GET 'https://'$1'/api/?type=config&action=edit&key=LUFRPT1idjBKeGo5R3pYZDYxMTRnbktOVkgxajlsa3M9RzFuYWZSdENlc3JZN2xCRzg3WlB0QkhqdGVVWm8xV2Nub05tRTBoNHkvbz0=&xpath=/config/devices/entry[@name=%27localhost.localdomain%27]/vsys/entry[@name=%27vsys1%27]/rulebase/security/rules/entry[@name=%27traffic-from-internet%27]/profile-setting/group&element=%3Cgroup%3E%3Cmember%3Ealerting%3C/member%3E%3C/group%3E'
+
+# Change rules
+curl -g -k -X GET 'https://'$1'/api/?key=LUFRPT1idjBKeGo5R3pYZDYxMTRnbktOVkgxajlsa3M9RzFuYWZSdENlc3JZN2xCRzg3WlB0QkhqdGVVWm8xV2Nub05tRTBoNHkvbz0=&type=config&action=set&xpath=/config/devices/entry[@name=%27localhost.localdomain%27]/vsys/entry[@name=%27vsys1%27]/rulebase/security/rules/entry[@name=%27open-and-rely-on-cloud-security%27]&element=%3Cdisabled%3Eno%3C/disabled%3E'
+curl -g -k -X GET 'https://'$1'/api/?key=LUFRPT1idjBKeGo5R3pYZDYxMTRnbktOVkgxajlsa3M9RzFuYWZSdENlc3JZN2xCRzg3WlB0QkhqdGVVWm8xV2Nub05tRTBoNHkvbz0=&type=config&action=set&xpath=/config/devices/entry[@name=%27localhost.localdomain%27]/vsys/entry[@name=%27vsys1%27]/rulebase/security/rules/entry[@name=%27mgmt-traffic-from-internet%27]&element=%3Cdisabled%3Eyes%3C/disabled%3E'
+curl -g -k -X GET 'https://'$1'/api/?key=LUFRPT1idjBKeGo5R3pYZDYxMTRnbktOVkgxajlsa3M9RzFuYWZSdENlc3JZN2xCRzg3WlB0QkhqdGVVWm8xV2Nub05tRTBoNHkvbz0=&type=config&action=set&xpath=/config/devices/entry[@name=%27localhost.localdomain%27]/vsys/entry[@name=%27vsys1%27]/rulebase/security/rules/entry[@name=%27web-to-db%27]&element=%3Cdisabled%3Eyes%3C/disabled%3E'
+curl -g -k -X GET 'https://'$1'/api/?key=LUFRPT1idjBKeGo5R3pYZDYxMTRnbktOVkgxajlsa3M9RzFuYWZSdENlc3JZN2xCRzg3WlB0QkhqdGVVWm8xV2Nub05tRTBoNHkvbz0=&type=config&action=set&xpath=/config/devices/entry[@name=%27localhost.localdomain%27]/vsys/entry[@name=%27vsys1%27]/rulebase/security/rules/entry[@name=%27internet-to-web%27]&element=%3Cdisabled%3Eyes%3C/disabled%3E'
+
 # Commit
 curl -k -X GET 'https://'$1'/api/?type=commit&cmd=<commit></commit>&key=LUFRPT1idjBKeGo5R3pYZDYxMTRnbktOVkgxajlsa3M9RzFuYWZSdENlc3JZN2xCRzg3WlB0QkhqdGVVWm8xV2Nub05tRTBoNHkvbz0='
