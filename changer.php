@@ -16,10 +16,7 @@
 
 <?php
         // Database variables
-        $servername = "localhost";
-        $username = "dbuser";
-        $password = "Panadmin001!";
-        $dbname = "auto-hack-cloud";
+        include('creds.php');
 
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
