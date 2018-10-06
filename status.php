@@ -100,13 +100,14 @@ Mischief:
 <br>
 <br>
 <br>
-Deployment took <?php echo $status['DEPLOYTIME'] ?><br>
-Bootstrapping took <?php echo $status['BOOTTIME'] ?><br>
-Post-deployment configuration took <?php echo $status['DONETIME'] ?><br>
-<br>
-<b>Total time taken was <?php echo $status['TOTALTIME'] ?></b><br>
-<br>
-<br>
+Timings
+<ul>	
+  <li>Deployment took <?php echo $status['DEPLOYTIME'] ?>
+  <li>Bootstrapping took <?php echo $status['BOOTTIME'] ?>
+  <li>Post-deployment configuration took <?php echo $status['DONETIME'] ?>
+  <br>
+  <li><b>Total time taken was <?php echo $status['TOTALTIME'] ?></b>
+</ul>
 <br>
 <br>
 <ul>
