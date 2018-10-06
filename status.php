@@ -37,10 +37,12 @@ $status= $result->fetch_assoc();
 echo "<br><br><br><h2><b>Status:&nbsp;&nbsp;&nbsp; </b><i>" . $status['STATUS'] . "</i></h2>\r\n";
 
 // If done, report stats of NGFW config
-if($status['STATUS'] == "Done") {
+if($status['STATUS'] == "Done")
+{
     echo "<h2><b>Mode:&nbsp;&nbsp;&nbsp; </b><i>";
     //echo $status['MODE'];
-    if($status['MODE'] == "Non-Blocking") {
+    if($status['MODE'] == "Non-Blocking")
+    {
       echo "&nbsp;<img src=off.png> - We're relying on the native cloud provider security...";
     }
     if($status['MODE'] == "Blocking") 
@@ -52,11 +54,11 @@ if($status['STATUS'] == "Done") {
     // Display option to change mode
     if($status['MODE'] == "Non-Blocking") {
       echo "<br>";
-      echo "<a href="changer.php?uid=<?php echo $uid ?>&blockme=true">Change to BLOCKING</a>";
+      echo '<a href="changer.php?uid=' . $uid . '&blockme=true">Change to BLOCKING</a>';
     }
     else {
       echo "<br>";
-      echo "<a href="changer.php?uid=<?php echo $uid ?>&alertme=true">Change to PERMISSIVE</a>";
+      echo '<a href="changer.php?uid=' . $uid  . '&alertme=true">Change to PERMISSIVE</a>';
     }
 }
 
