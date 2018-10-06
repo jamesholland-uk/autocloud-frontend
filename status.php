@@ -43,7 +43,7 @@ if($status['STATUS'] == "Done")
     //echo $status['MODE'];
     if($status['MODE'] == "Non-Blocking")
     {
-      echo "&nbsp;<img src=off.png> - We're relying on the native cloud provider security...";
+      echo "&nbsp;<img src=off.png> - We're using the native cloud provider security, the next-generation firewall is off...";
     }
     if($status['MODE'] == "Blocking") 
     { 
@@ -53,10 +53,10 @@ if($status['STATUS'] == "Done")
 
     // Display option to change mode
     if($status['MODE'] == "Non-Blocking") {
-      echo '<br><a href="changer.php?uid=' . $uid . '&blockme=true">Change to BLOCKING</a><br><br>';
+      echo '<a href="changer.php?uid=' . $uid . '&blockme=true">Turn next-generation firewall on</a><br><br>';
     }
     else {
-      echo '<br><a href="changer.php?uid=' . $uid  . '&alertme=true">Change to PERMISSIVE</a><br><br>';
+      echo '<a href="changer.php?uid=' . $uid  . '&alertme=true">Turn next-generation firewall off</a><br><br>';
     }
 }
 
