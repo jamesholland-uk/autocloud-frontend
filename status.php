@@ -85,29 +85,33 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
 <?php
 } elseif($status['STATUS'] == "Done") {
 ?>
-	<ul>
+Palo Alto Networks Virtual Appliances
+<ul>
 	<li><a href="https://<?php echo $status['MGMTIP']  ?>" target="_blank">Link to GUI of your brand new firewall!</a><br>
 	<li><a href="https://demomatic-rama-gcp.panw.co.uk" target="_blank">Link to Panorama</a><br>
-	<li><a href="http://<?php echo $status['KALIIP']  ?>:4200" target="_blank">Link to Attacker Console for Metasploit</a><br>
+</ul>
+Mischief
+<ul>	
+  <li><a href="http://<?php echo $status['KALIIP']  ?>:4200" target="_blank">Link to Attacker Console for Metasploit</a><br>
   <li><a href="http://<?php echo $status['UNTRUSTIP']  ?>" target="_blank">Link to Web Server for Web-Based Attacks</a><br>
-    </ul>
-    <br>
-    <br>
-    <br>
-    <br>
-    Deployment took <?php echo $status['DEPLOYTIME'] ?><br>
-    Bootstrapping took <?php echo $status['BOOTTIME'] ?><br>
-    Post-deployment configuration took <?php echo $status['DONETIME'] ?><br>
-    <br>
-    <b>Total time taken was <?php echo $status['TOTALTIME'] ?></b><br>
-    <br>
-    <br>
-    <br>
-	<br>
-	<ul>
-        <li><a href="process-summary.png" target="_blank">Link to Deployment Process Summary Diagram</a><br>
-        <li><a href="network-diagram.png" target="_blank">Link to Topology Diagram</a><br>
-        <li><a href="https://www.youtube.com/watch?v=DvLN-VH_xoo&feature=youtu.be" target="_blank">Manual Process Video</a><br>
+</ul>
+<br>
+<br>
+<br>
+<br>
+Deployment took <?php echo $status['DEPLOYTIME'] ?><br>
+Bootstrapping took <?php echo $status['BOOTTIME'] ?><br>
+Post-deployment configuration took <?php echo $status['DONETIME'] ?><br>
+<br>
+<b>Total time taken was <?php echo $status['TOTALTIME'] ?></b><br>
+<br>
+<br>
+<br>
+<br>
+<ul>
+  <li><a href="process-summary.png" target="_blank">Link to Deployment Process Summary Diagram</a><br>
+  <li><a href="network-diagram.png" target="_blank">Link to Topology Diagram</a><br>
+  <li><a href="https://www.youtube.com/watch?v=DvLN-VH_xoo&feature=youtu.be" target="_blank">Manual Process Video</a><br>
 </ul>
 <?php
 }
