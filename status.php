@@ -53,12 +53,10 @@ if($status['STATUS'] == "Done")
 
     // Display option to change mode
     if($status['MODE'] == "Non-Blocking") {
-      echo "<br>";
-      echo '<a href="changer.php?uid=' . $uid . '&blockme=true">Change to BLOCKING</a>';
+      echo '<br><a href="changer.php?uid=' . $uid . '&blockme=true">Change to BLOCKING</a><br><br>';
     }
     else {
-      echo "<br>";
-      echo '<a href="changer.php?uid=' . $uid  . '&alertme=true">Change to PERMISSIVE</a>';
+      echo '<br><a href="changer.php?uid=' . $uid  . '&alertme=true">Change to PERMISSIVE</a><br><br>';
     }
 }
 
