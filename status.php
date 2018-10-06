@@ -43,11 +43,11 @@ if($status['STATUS'] == "Done")
     //echo $status['MODE'];
     if($status['MODE'] == "Non-Blocking")
     {
-      echo '&nbsp;<a href="changer.php?uid=' . $uid . '&blockme=true"><img src=off.png></a> - ' . "We're using the native cloud provider security, the next-generation firewall is off...";
+      echo '&nbsp;<a href="changer.php?uid=' . $uid . '&blockme=true"><img src=off.png></a> ' . "We're using the native cloud provider security, the next-generation firewall is off...";
     }
     if($status['MODE'] == "Blocking") 
     { 
-      echo '&nbsp;<a href="changer.php?uid=' . $uid  . '&alertme=true"><img src=on.png></a> - ' . "We're using the next-generation firewall to block attacks..."; 
+      echo '&nbsp;<a href="changer.php?uid=' . $uid  . '&alertme=true"><img src=on.png></a> ' . "We're using the next-generation firewall to block attacks..."; 
     }
     echo "</i></h2>\r\n";
 
@@ -88,7 +88,7 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
 Palo Alto Networks Virtual Appliances:
 <ul>
 	<li><a href="https://<?php echo $status['MGMTIP']  ?>" target="_blank">Web GUI for your brand new firewall!</a><br>
-	<li><a href="https://demomatic-rama-gcp.panw.co.uk" target="_blank">Web GUI for Panorama Central Managemenet, Logging and Reporting</a><br>
+	<li><a href="https://demomatic-rama-gcp.panw.co.uk" target="_blank">Web GUI for Panorama - Central Managemenet, Logging and Reporting</a><br>
 </ul>
 Mischief:
 <ul>	
@@ -130,9 +130,16 @@ echo "<b><a href=index.html>Start Again</a><b><br><br><br><br>";
 
 $conn->close();
 
+
+
 ?>
 	</td></tr>
 	</table>
 	</b>
+  <?php
+    if($status['STATUS'] == "Done") {
+      sleep(3600);
+    }
+  ?>
   </body>
 </html>
