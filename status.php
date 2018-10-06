@@ -85,15 +85,16 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
 <?php
 } elseif($status['STATUS'] == "Done") {
 ?>
-Palo Alto Networks Virtual Appliances
+Palo Alto Networks Virtual Appliances:
 <ul>
-	<li><a href="https://<?php echo $status['MGMTIP']  ?>" target="_blank">Link to GUI of your brand new firewall!</a><br>
-	<li><a href="https://demomatic-rama-gcp.panw.co.uk" target="_blank">Link to Panorama</a><br>
+	<li><a href="https://<?php echo $status['MGMTIP']  ?>" target="_blank">Web GUI for your brand new firewall!</a><br>
+	<li><a href="https://demomatic-rama-gcp.panw.co.uk" target="_blank">Web GUI for Panorama Central Managemenet, Logging and Reporting</a><br>
 </ul>
-Mischief
+Mischief:
 <ul>	
-  <li><a href="http://<?php echo $status['KALIIP']  ?>:4200" target="_blank">Link to Attacker Console for Metasploit</a><br>
-  <li><a href="http://<?php echo $status['UNTRUSTIP']  ?>" target="_blank">Link to Web Server for Web-Based Attacks</a><br>
+  <li><a href="http://<?php echo $status['UNTRUSTIP'] ?>:8080" target="_blank">Java Web App</a><br>
+  <li><a href="http://<?php echo $status['KALIIP'] ?>:4200" target="_blank">Metasploit Console for Attacking Java Web App</a><br>
+  <li><a href="http://<?php echo $status['UNTRUSTIP' ]?>" target="_blank">PHP Web App and Web-Based Attacks</a><br>
 </ul>
 <br>
 <br>
