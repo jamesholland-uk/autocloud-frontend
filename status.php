@@ -130,8 +130,8 @@ Information:
 
 echo "<br><br><br><br><font color=bfbfbf>";
 echo "Message: " . $status['MESSAGE'] . "<br>";
-echo "Phone: " . $status['PHONE'] . "<br>";
-echo "Email:" . $status['EMAIL'] . "<br>";
+//echo "Phone: " . $status['PHONE'] . "<br>";
+//echo "Email:" . $status['EMAIL'] . "<br>";
 echo "Nickname: " . $status['NICKNAME'] . "<br></font><br><br>";
 
 if($status['STATUS'] == "Done") {
