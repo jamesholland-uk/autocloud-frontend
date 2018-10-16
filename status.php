@@ -102,7 +102,7 @@ Mischief:
 <ul>	
   <li><a href="http://<?php echo $status['UNTRUSTIP'] ?>:8080/struts2_2.3.15.1-showcase/showcase.action" target="_blank">Java Web App</a>
   <li><a href="http://<?php echo $status['KALIIP'] ?>:4200" target="_blank">Metasploit Console for Attacking Java Web App</a>
-  <li><a href="http://<?php echo $status['UNTRUSTIP' ]?>" target="_blank">PHP Web App and Web-Based Attacks</a> (currently non-Chrome)
+  <li><a href="http://<?php echo $status['UNTRUSTIP' ]?>" target="_blank">PHP Web App and Web-Based Attacks</a>
   <li><a href="http://<?php echo $status['UNTRUSTIP' ]?>?uoGSo[]=%3Cscript%3Ealert(%E2%80%98BreakingPoint%E2%80%99)%3C/script%3E" target="_blank">Generic XSS</a>
   <li><a href="http://<?php echo $status['UNTRUSTIP' ]?>/graph.php?current_language=/../../../../../../../../etc/passwd.&module=Accounts&action=Import&parenttab=Support%5D" target="_blank">Generic Traversal and /etc/passwd Access</a> 
   <li><a href="http://<?php echo $status['UNTRUSTIP'] ?>:4200" target="_blank">Console on Web Server</a>
