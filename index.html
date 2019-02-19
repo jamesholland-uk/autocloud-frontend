@@ -6,29 +6,34 @@
     <title>Demo</title>
   </head>
   <body>
-            <b>
-        <table border="0">
-        <tr><td><img src="logo.png"></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td><h1>Cloud Automation Demo (GCP)</h1></td></tr>
-        <tr><td>&nbsp;</td><td>&nbsp;</td><td>
-
-  	<br>
-        <br>
-        <br>
-        <br>
-        <br>
-	<form action="run.php" method="post">
-				<table border=0>
-				<tr><td>Message</td><td>&nbsp;&nbsp;&nbsp;</td><td><input name="message" title="Numbers, letters, underscores, dots and spaces only" maxlength="60" type="text" pattern="^[a-z|A-Z|0-9|_|.|-|\s]*$"size="50"></td></tr>
-				<tr><td>Email</td><td>&nbsp;&nbsp;&nbsp;</td><td><input name="email" title="valid email address required" type="email" size="50"></td></tr>
-				<tr><td>Phone</td><td>&nbsp;&nbsp;&nbsp;</td><td><input name="phone" title="International format, no spaces or hyphens e.g. +12345678912" type="tel" pattern="^\+\d*$" size="50">&nbsp;&nbsp;(<a href=https://en.wikipedia.org/wiki/E.164 target="_blank">International format</a>: +1234567890)</td></tr>
-				<tr><td>Nickname</td><td>&nbsp;&nbsp;&nbsp;</td><td><input name="nickname" title="Numbers and letters only" type="text" pattern="^[a-z|A-Z|0-9|\s]*$" maxlength="60" size="50"></td></tr>
-				<tr><td>Palo Alto Networks Contact</td><td>&nbsp;&nbsp;&nbsp;</td><td><input name="se" title="Numbers, letters, underscores, dots and spaces only" type="text" pattern="^[a-z|A-Z|0-9|_|.|-|@|\s]*$" size="50">&nbsp;&nbsp;(Name, email, phone, etc)</td></tr>
-				</table>
-		<br><br>
-		<input type="submit" value="Deploy">
-	</form>
-        </td></tr>
-        </table>
-        </b>
+    <table border="0">
+      <tr>
+        <td><img src="logo.png"></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><h1>Cloud Automation Demos</h1></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <table border="0">
+            <tr>
+              <td style="vertical-align:middle"><a href="azure-demo.html"><img src="azure.png"></a></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              <td style="vertical-align:middle"><a href="autocloud-frontend/"><img src="gcp.png"></a></td>
+            </tr>
+            <tr>
+              <td style="vertical-align:top"><a href="azure-demo.html"><br>Azure - Automation Demo</a><ul><li>Firewall bootstrapping<li>Automated LSVPN provisioning<li>Panorama integration</ul></td>
+              <td>&nbsp;</td>
+              <td style="vertical-align:top"><a href="autocloud-frontend/"><br>Google Cloud - Hack Lab Automation Demo</a><li>Automated application stack provisioning <li>Firewall bootstrapping<li>Automated attacker provisioning<li>Panorama integration</td>
+            </tr>
+          </table>
+        </td>
+        </tr>
+      </table>
   </body>
 </html>
