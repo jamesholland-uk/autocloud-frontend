@@ -13,7 +13,7 @@ echo '' > links.html
 echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" href="stylesheet.css" type="text/css"><title>Cloudy Attacker</title></head><body>' >> links.html
 
 echo ""
-echo "Firewall Management                      https://${mgmt_ip}" >> links.html
+echo 'Firewall Management                      <a href="https://${mgmt_ip}>https://${mgmt_ip}</a>"' >> links.html
 echo "Panorama Management                      https://rama.panw.co.uk"
 echo "Metasploit Console                       http://${kali_ip}:4200"
 echo "Java Web App                             http://${untrust_ip}:8080/struts2_2.3.15.1-showcase/showcase.action"
