@@ -1,11 +1,11 @@
 #!/bin/sh
 
-/google-cloud-sdk/bin/gcloud --no-user-output-enabled auth activate-service-account --key-file=gcp_compute_key_svc_cloud-automation.json
-/google-cloud-sdk/bin/gcloud --no-user-output-enabled config set project cloud-automation-demo
+/usr/bin/gcloud --no-user-output-enabled auth activate-service-account --key-file=gcp_compute_key_svc_cloud-automation.json
+/usr/bin/gcloud --no-user-output-enabled config set project cloud-automation-demo
 
-mgmt_ip=`/google-cloud-sdk/bin/gcloud compute instances list | grep fw- | grep $1 | awk -F"[ ,]+" '{print $8}'`
-untrust_ip=`/google-cloud-sdk/bin/gcloud compute instances list | grep fw- | grep $1 | awk -F"[ ,]+" '{print $9}'`
-kali_ip=`/google-cloud-sdk/bin/gcloud compute instances list | grep kali- | grep $1 | awk '{print $5}'`
+mgmt_ip=`/usr/bin/gcloud compute instances list | grep fw- | grep $1 | awk -F"[ ,]+" '{print $8}'`
+untrust_ip=`/usr/bin/gcloud compute instances list | grep fw- | grep $1 | awk -F"[ ,]+" '{print $9}'`
+kali_ip=`/usr/bin/gcloud compute instances list | grep kali- | grep $1 | awk '{print $5}'`
 
 touch links.html
 
@@ -22,4 +22,4 @@ echo "Generic Traversal and /etc/passwd Access http://${untrust_ip}/graph.php?cu
 echo "Web Server Console                       http://${untrust_ip}:4200"
 echo ""
 
-echo '</body></html>'
+echo '</body></html>' >> links.html
