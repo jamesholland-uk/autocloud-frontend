@@ -1,12 +1,8 @@
 #!/bin/sh
 
-the_glcoud_ver=$(/usr/bin/gcloud version)
-the_glcoud_auth=$(/usr/bin/gcloud auth activate-service-account --key-file=/home/attacker/gcp_compute_key_svc_cloud-automation.json)
-the_glcoud_proj=$(/usr/bin/gcloud config set project cloud-automation-demo)
-
-echo $the_glcoud_ver
-echo $the_glcoud_auth
-echo $the_glcoud_proj
+/usr/bin/gcloud version
+/usr/bin/gcloud auth activate-service-account --key-file=/home/attacker/gcp_compute_key_svc_cloud-automation.json
+/usr/bin/gcloud config set project cloud-automation-demo
 
 mgmt_ip=`/usr/bin/gcloud compute instances list | grep fw- | grep $1 | awk -F"[ ,]+" '{print $8}'`
 untrust_ip=`/usr/bin/gcloud compute instances list | grep fw- | grep $1 | awk -F"[ ,]+" '{print $9}'`
