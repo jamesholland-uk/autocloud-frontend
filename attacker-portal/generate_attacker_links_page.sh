@@ -1,12 +1,14 @@
 #!/bin/sh
 
-/usr/bin/gcloud version
-/usr/bin/gcloud auth activate-service-account --key-file=/home/attacker/gcp_compute_key_svc_cloud-automation.json
-/usr/bin/gcloud config set project cloud-automation-demo
+cd /home/attacker/html/attacker-portal
 
-mgmt_ip=`/usr/bin/gcloud compute instances list | grep fw- | grep $1 | awk -F"[ ,]+" '{print $8}'`
-untrust_ip=`/usr/bin/gcloud compute instances list | grep fw- | grep $1 | awk -F"[ ,]+" '{print $9}'`
-kali_ip=`/usr/bin/gcloud compute instances list | grep kali- | grep $1 | awk '{print $5}'`
+sudo -u attacker /usr/bin/gcloud version
+sudo -u attacker /usr/bin/gcloud auth activate-service-account --key-file=/home/attacker/gcp_compute_key_svc_cloud-automation.json
+sudo -u attacker /usr/bin/gcloud config set project cloud-automation-demo
+
+mgmt_ip=`sudo -u attacker /usr/bin/gcloud compute instances list | grep fw- | grep $1 | awk -F"[ ,]+" '{print $8}'`
+untrust_ip=`sudo -u attacker /usr/bin/gcloud compute instances list | grep fw- | grep $1 | awk -F"[ ,]+" '{print $9}'`
+kali_ip=`sudo -u attacker /usr/bin/gcloud compute instances list | grep kali- | grep $1 | awk '{print $5}'`
 
 echo $mgmt_ip
 echo $untrust_ip
