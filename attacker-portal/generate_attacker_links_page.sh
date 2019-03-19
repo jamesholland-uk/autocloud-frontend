@@ -12,17 +12,23 @@ echo '' > links.html
 
 echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" href="stylesheet.css" type="text/css"><title>Cloudy Attacker</title></head><body>' >> links.html
 
-echo ""
-echo "Firewall Management                      <a href="https://${mgmt_ip}">Firewall Management</a>" >> links.html
-echo "Panorama Management                      <a href="https://rama.panw.co.uk">Panorama</a>" >> links.html
-echo "Firewall Management                      https://${mgmt_ip}"
-echo "Panorama Management                      https://rama.panw.co.uk"
-echo "Metasploit Console                       http://${kali_ip}:4200"
-echo "Java Web App                             http://${untrust_ip}:8080/struts2_2.3.15.1-showcase/showcase.action"
-echo "PHP Web App                              http://${untrust_ip}"
-echo "Generic XSS Attack                       http://${untrust_ip}?uoGSo[]=%3Cscript%3Ealert(%E2%80%98BreakingPoint%E2%80%99)%3C/script%3E"
-echo "Generic Traversal and /etc/passwd Access http://${untrust_ip}/graph.php?current_language=/../../../../../../../../etc/passwd.&module=Accounts&action=Import&parenttab=Support%5D"
-echo "Web Server Console                       http://${untrust_ip}:4200"
-echo ""
+
+echo "<a href="https://${mgmt_ip}" target="_blank">Firewall Management</a><br>" >> links.html
+echo "<a href="https://rama.panw.co.uk target="_blank"">Panorama</a><br>" >> links.html
+echo "<a href="http://${kali_ip}:4200 target="_blank"">Attacker Console</a><br>" >> links.html
+echo "<a href="http://${untrust_ip}:8080/struts2_2.3.15.1-showcase/showcase.action target="_blank"">Java Web App</a><br>" >> links.html
+
+
+
+#echo ""
+#echo "Firewall Management                      https://${mgmt_ip}"
+#echo "Panorama Management                      https://rama.panw.co.uk"
+#echo "Metasploit Console                       http://${kali_ip}:4200"
+#echo "Java Web App                             http://${untrust_ip}:8080/struts2_2.3.15.1-showcase/showcase.action"
+#echo "PHP Web App                              http://${untrust_ip}"
+#echo "Generic XSS Attack                       http://${untrust_ip}?uoGSo[]=%3Cscript%3Ealert(%E2%80%98BreakingPoint%E2%80%99)%3C/script%3E"
+#echo "Generic Traversal and /etc/passwd Access http://${untrust_ip}/graph.php?current_language=/../../../../../../../../etc/passwd.&module=Accounts&action=Import&parenttab=Support%5D"
+#echo "Web Server Console                       http://${untrust_ip}:4200"
+#echo ""
 
 echo '</body></html>' >> links.html
