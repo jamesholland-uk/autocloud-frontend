@@ -19,7 +19,7 @@
         <?php
         $reqNumber=$_POST['reqNumber'];
         echo $reqNumber;        
-        $output = shell_exec('/var/www/html/attacker-portal/generate_attacker_links_page.sh $reqNumber');
+        $output = shell_exec('/var/www/html/attacker-portal/generate_attacker_links_page.sh $reqNumber 2>&1');
         echo "<pre>$output</pre>";
         header('Location: links.html'); 
         ?>
