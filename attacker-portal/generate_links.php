@@ -22,7 +22,7 @@
         $output = shell_exec('/var/www/html/attacker-portal/generate_attacker_links_page.sh $reqNumber');
         echo "<pre>$output</pre>";
         ?>
-
+        <a href=links.html>Next</a>
         </td></tr>
         </table>
         </b>
