@@ -10,21 +10,21 @@
     <table border="0">
     <tr><td><img src="logo.png"></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td><h1>Cloud Attacker</h1></td></tr>
     <tr><td>&nbsp;</td><td>&nbsp;</td><td>
-    	<br>
+        <br>
       <br>
       <br>
       <br>
       <br>
-	    <form action="attack.php" method="post">
-			  <table border=0>
-				<tr><td>Environment</td><td>&nbsp;&nbsp;&nbsp;</td><td><input name="reqNumber" title="e.g. SCOPS012" maxlength="15" type="text" pattern="^[a-z|A-Z|0-9|_|.|-|\s]*$"size="15"></td></tr>
+
+<?php
+
+$reqNumber=$_GET["reqNumber"];
+exec("/var/www/html/autocloud-frontend/attacker-portal/generate_attacker_links_page.sh $reqNumber");
+
+?>
+
+</td></tr>
         </table>
-        <br>
-        <br>
-		    <input type="submit" value="Let's Go">
-	    </form>
-      </td></tr>
-      </table>
-      </b>
+        </b>
   </body>
 </html>
