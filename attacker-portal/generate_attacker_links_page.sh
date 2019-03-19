@@ -15,6 +15,8 @@ echo '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www
 echo ""
 echo "Firewall Management                      <a href="https://${mgmt_ip}">Firewall Management</a>" >> links.html
 echo "Panorama Management                      <a href="https://rama.panw.co.uk">Panorama</a>" >> links.html
+echo "Firewall Management                      https://${mgmt_ip}"
+echo "Panorama Management                      https://rama.panw.co.uk"
 echo "Metasploit Console                       http://${kali_ip}:4200"
 echo "Java Web App                             http://${untrust_ip}:8080/struts2_2.3.15.1-showcase/showcase.action"
 echo "PHP Web App                              http://${untrust_ip}"
