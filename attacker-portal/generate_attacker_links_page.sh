@@ -20,15 +20,15 @@ echo "<a href="http://${untrust_ip}:8080/struts2_2.3.15.1-showcase/showcase.acti
 
 
 
-#echo ""
-#echo "Firewall Management                      https://${mgmt_ip}"
-#echo "Panorama Management                      https://rama.panw.co.uk"
-#echo "Metasploit Console                       http://${kali_ip}:4200"
-#echo "Java Web App                             http://${untrust_ip}:8080/struts2_2.3.15.1-showcase/showcase.action"
-#echo "PHP Web App                              http://${untrust_ip}"
-#echo "Generic XSS Attack                       http://${untrust_ip}?uoGSo[]=%3Cscript%3Ealert(%E2%80%98BreakingPoint%E2%80%99)%3C/script%3E"
-#echo "Generic Traversal and /etc/passwd Access http://${untrust_ip}/graph.php?current_language=/../../../../../../../../etc/passwd.&module=Accounts&action=Import&parenttab=Support%5D"
-#echo "Web Server Console                       http://${untrust_ip}:4200"
-#echo ""
+echo ""
+echo "Firewall Management                      https://${mgmt_ip}"
+echo "Panorama Management                      https://rama.panw.co.uk"
+echo "Metasploit Console                       http://${kali_ip}:4200"
+echo "Java Web App                             http://${untrust_ip}:8080/struts2_2.3.15.1-showcase/showcase.action"
+echo "PHP Web App                              http://${untrust_ip}"
+echo "Generic XSS Attack                       http://${untrust_ip}?uoGSo[]=%3Cscript%3Ealert(%E2%80%98BreakingPoint%E2%80%99)%3C/script%3E"
+echo "Generic Traversal and /etc/passwd Access http://${untrust_ip}/graph.php?current_language=/../../../../../../../../etc/passwd.&module=Accounts&action=Import&parenttab=Support%5D"
+echo "Web Server Console                       http://${untrust_ip}:4200"
+echo ""
 
 echo '</body></html>' >> links.html
