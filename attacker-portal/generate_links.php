@@ -16,15 +16,19 @@
       <br>
       <br>
 
-<?php
+      <?php phpinfo(); ?>
+      
+      <?php
 
-$reqNumber=$_GET["reqNumber"];
-echo $reqNumber;
-exec("/var/www/html/attacker-portal/generate_attacker_links_page.sh $reqNumber");
 
-?>
 
-</td></tr>
+        $reqNumber=$_GET["reqNumber"];
+        echo $reqNumber;
+        exec("/var/www/html/attacker-portal/generate_attacker_links_page.sh $reqNumber");
+
+        ?>
+
+        </td></tr>
         </table>
         </b>
   </body>
