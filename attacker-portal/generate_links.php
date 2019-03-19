@@ -17,7 +17,7 @@
       <br>
      
         <?php
-        $reqNumber=$_GET["reqNumber"];
+        $reqNumber=$_POST['reqNumber'];
         echo $reqNumber;
         exec("/var/www/html/attacker-portal/generate_attacker_links_page.sh $reqNumber");
         ?>
