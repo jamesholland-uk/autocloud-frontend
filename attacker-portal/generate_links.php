@@ -19,7 +19,7 @@
 <?php
 
 $reqNumber=$_GET["reqNumber"];
-exec("/var/www/html/autocloud-frontend/attacker-portal/generate_attacker_links_page.sh $reqNumber");
+exec("/var/www/html/attacker-portal/generate_attacker_links_page.sh $reqNumber");
 
 ?>
 
