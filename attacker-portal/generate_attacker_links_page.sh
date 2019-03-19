@@ -3,16 +3,16 @@
 the_glcoud_auth=$(/usr/bin/gcloud --no-user-output-enabled auth activate-service-account --key-file=/home/attacker/gcp_compute_key_svc_cloud-automation.json)
 the_glcoud_proj=$(/usr/bin/gcloud --no-user-output-enabled config set project cloud-automation-demo)
 
-echo the_glcoud_auth
-echo the_glcoud_proj
+echo $the_glcoud_auth
+echo $the_glcoud_proj
 
 mgmt_ip=`/usr/bin/gcloud compute instances list | grep fw- | grep $1 | awk -F"[ ,]+" '{print $8}'`
 untrust_ip=`/usr/bin/gcloud compute instances list | grep fw- | grep $1 | awk -F"[ ,]+" '{print $9}'`
 kali_ip=`/usr/bin/gcloud compute instances list | grep kali- | grep $1 | awk '{print $5}'`
 
-echo mgmt_ip
-echo untrust_ip
-echo kali_ip
+echo $mgmt_ip
+echo $untrust_ip
+echo $kali_ip
 
 touch links.html
 echo '' > links.html
