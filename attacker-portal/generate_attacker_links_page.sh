@@ -1,8 +1,10 @@
 #!/bin/sh
 
-the_glcoud_auth=$(/usr/bin/gcloud --no-user-output-enabled auth activate-service-account --key-file=/home/attacker/gcp_compute_key_svc_cloud-automation.json)
-the_glcoud_proj=$(/usr/bin/gcloud --no-user-output-enabled config set project cloud-automation-demo)
+the_glcoud_ver=$(/usr/bin/gcloud version)
+the_glcoud_auth=$(/usr/bin/gcloud auth activate-service-account --key-file=/home/attacker/gcp_compute_key_svc_cloud-automation.json)
+the_glcoud_proj=$(/usr/bin/gcloud config set project cloud-automation-demo)
 
+echo $the_glcoud_ver
 echo $the_glcoud_auth
 echo $the_glcoud_proj
 
