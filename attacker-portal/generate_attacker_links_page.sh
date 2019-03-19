@@ -1,6 +1,6 @@
 #!/bin/sh
 
-/usr/bin/gcloud --no-user-output-enabled auth activate-service-account --key-file=gcp_compute_key_svc_cloud-automation.json
+/usr/bin/gcloud --no-user-output-enabled auth activate-service-account --key-file=/home/attacker/gcp_compute_key_svc_cloud-automation.json
 /usr/bin/gcloud --no-user-output-enabled config set project cloud-automation-demo
 
 mgmt_ip=`/usr/bin/gcloud compute instances list | grep fw- | grep $1 | awk -F"[ ,]+" '{print $8}'`
