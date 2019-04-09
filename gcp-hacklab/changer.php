@@ -35,9 +35,10 @@
 
         $ipadd=$status['MGMTIP'];
         //echo $ipadd;
+        echo pwd;
         
         if ($_GET['blockme']) {
-                exec("/var/www/html/autocloud-frontend/blockme.sh $ipadd");
+                exec("./blockme.sh $ipadd");
                 
                 $sql = "UPDATE jobs SET MODE = 'Blocking' WHERE JOB = '$uid'";
                 if ($conn->query($sql) === TRUE) {
@@ -51,7 +52,7 @@
         }
 
         if ($_GET['alertme']) {
-                exec("/var/www/html/autocloud-frontend/alertme.sh $ipadd");
+                exec("./alertme.sh $ipadd");
 
                 $sql = "UPDATE jobs SET MODE = 'Non-Blocking' WHERE JOB = '$uid'";
                 if ($conn->query($sql) === TRUE) {
