@@ -44,7 +44,7 @@ if($email == "") {
         $email='jholland@paloaltonetworks.com';
 }
 if($nickname == "") {
-        $nickname='Colonel Mustard';
+        $nickname='Miss Scarlett';
 }
 if($se == "") {
         $se='contact_salesEMEA@paloaltonetworks.com';
@@ -67,7 +67,7 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 
 // redirect user to status page
-header("Location: status.php?uid=$uid");
+//header("Location: status.php?uid=$uid");
 
 ?>
 
