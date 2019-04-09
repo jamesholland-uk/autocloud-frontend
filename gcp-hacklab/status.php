@@ -96,7 +96,7 @@ Information:
 Palo Alto Networks Virtual Appliances:
 <ul>
 	<li><a href="https://<?php echo $status['MGMTIP']  ?>" target="_blank">Web GUI for your brand new firewall!</a>
-	<li><a href="https://demomatic-rama.panw.co.uk" target="_blank">Web GUI for Panorama - Central Managemenet, Logging and Reporting</a>
+	<li><a href="https://rama.panw.co.uk" target="_blank">Web GUI for Panorama - Central Managemenet, Logging and Reporting</a>
 </ul>
 Mischief:
 <ul>	

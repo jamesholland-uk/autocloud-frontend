@@ -76,7 +76,7 @@ if($status['STATUS'] == "Deploying" || $status['STATUS'] == "Bootstrapping" || $
 ?>
 	<ul>
 	<li><a href="https://<?php echo $status['MGMTIP']  ?>" target="_blank">Link to GUI of your brand new firewall!</a><br>
-	<li><a href="https://demomatic-rama.panw.co.uk" target="_blank">Link to Panorama</a><br>
+	<li><a href="https://rama.panw.co.uk" target="_blank">Link to Panorama</a><br>
 	<li><a href="https://demomatic-lsvpn-fwmgmt.panw.co.uk" target="_blank">Link to LSVPN Headend Firewall</a><br>
     </ul><br><br>
     Deployment took <?php echo $status['DEPLOYTIME'] ?><br>
