@@ -13,10 +13,7 @@
 
 <?php
 // Database variables
-$servername = "localhost";
-$username = "dbuser";
-$password = "section5";
-$dbname = "azuredb";
+include('azure-creds.php');
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
