@@ -35,7 +35,7 @@ $se=$_POST["se"];
 
 // Sort out inputs
 if($message == "") {
-	$message='Default message';
+	$message='Power of the Platform';
 }
 if($phone == "") {
         $phone='+447764490426';

@@ -16,7 +16,7 @@
 
 <?php
         // Database variables
-        include('creds.php');
+        include('gcp-creds.php');
 
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
