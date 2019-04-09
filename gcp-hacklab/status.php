@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <?php 
       // Database variables
-      include('creds.php');
+      include('gcp-creds.php');
 
       // Create connection
       $conn = new mysqli($servername, $username, $password, $dbname);
