@@ -67,7 +67,7 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 
 // redirect user to status page
-//header("Location: status.php?uid=$uid");
+header("Location: status.php?uid=$uid");
 
 ?>
 
