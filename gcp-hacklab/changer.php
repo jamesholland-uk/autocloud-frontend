@@ -34,8 +34,6 @@
         $status= $result->fetch_assoc();
 
         $ipadd=$status['MGMTIP'];
-        //echo $ipadd;
-        echo pwd;
         
         if ($_GET['blockme']) {
                 exec("./blockme.sh $ipadd");
